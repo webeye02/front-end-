@@ -3,13 +3,140 @@
 
 <head>
     <title>Carousel</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .swiper-container {
+            width: 100%;
+            max-width: 1200px;
+            height: 500px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .swiper-slide {
+            position: relative;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-caption {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .slide-caption h2 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .slide-caption p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+
+        /* Navigation buttons */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #fff;
+            width: 50px;
+            height: 50px;
+        }
+
+        .swiper-pagination-bullet {
+            background: #fff;
+            opacity: 1;
+        }
+    </style>
+
 </head>
 
 <body>
     <div class="caousel">
         <h1>Aroosa</h1>
-    
+
     </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="image.png" alt="Slide 1">
+                <div class="slide-caption">
+                    <h2>Slide Title 1</h2>
+                    <p>Description for slide 1.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="imge2.png" alt="Slide 2">
+                <div class="slide-caption">
+                    <h2>Slide Title 2</h2>
+                    <p>Description for slide 2.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="image3.png" alt="Slide 2">
+                <div class="slide-caption">
+                    <h2>Slide Title 2</h2>
+                    <p>Description for slide 2.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="image4.png" alt="Slide 2">
+                <div class="slide-caption">
+                    <h2>Slide Title 2</h2>
+                    <p>Description for slide 2.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="imge2.png" alt="Slide 2">
+                <div class="slide-caption">
+                    <h2>Slide Title 2</h2>
+                    <p>Description for slide 2.</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const swiper = new Swiper('.swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true,
+                },
+            });
+        });
+
+    </script>
+
 </body>
 
 </html>
