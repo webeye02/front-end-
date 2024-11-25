@@ -61,6 +61,341 @@
             background: #fff;
             opacity: 1;
         }
+
+        /* section 2 */
+        .mehendi-lehengas {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .mehendi-lehengas h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .slider {
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .card {
+            flex: 0 0 25%;
+            text-align: center;
+            position: relative;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+        }
+
+        .card img.hover-img {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .card:hover .main-img {
+            opacity: 0;
+        }
+
+        .card:hover .hover-img {
+            display: block;
+            opacity: 1;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .card p {
+            font-size: 16px;
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+        button.prev {
+            left: 10px;
+        }
+
+        button.next {
+            right: 10px;
+        }
+
+        /* section 2 */
+        .mehendi-lehengas {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .mehendi-lehengas h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .slider {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            width: 100%;
+            /* Full width to avoid side gaps */
+            margin: 0 auto;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 10px;
+            /* Space between cards */
+            transition: transform 0.5s ease-in-out;
+            overflow: hidden;
+        }
+
+        .card {
+            flex: 0 0 19%;
+            /* Adjusted to fit 5 cards with space */
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Hover Zoom Effect */
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 300px;
+            /* Increased height */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+
+        .image-container .hover-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+        }
+
+        .image-container:hover .main-img {
+            opacity: 0;
+        }
+
+        .image-container:hover .hover-img {
+            opacity: 1;
+        }
+
+        /* Prevent hover effect when buttons are focused */
+        .buttons:hover+.image-container:hover .main-img {
+            opacity: 1;
+        }
+
+        .buttons:hover+.image-container:hover .hover-img {
+            opacity: 0;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Buttons */
+        .buttons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            z-index: 2;
+        }
+
+        .card:hover .buttons {
+            display: flex;
+        }
+
+        .buttons button {
+            padding: 8px 15px;
+            border: none;
+            font-size: 14px;
+            color: black;
+            background-color: white;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .buttons button:hover {
+            background-color: gray;
+            color: white;
+        }
+
+        .quick-view:hover::before {
+            content: "👁️";
+        }
+
+        .add-to-cart:hover::before {
+            content: "🛒";
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .card p {
+            font-size: 16px;
+            font-weight: bold;
+            color: #e67e22;
+            margin-bottom: 15px;
+        }
+
+        /* Slider Arrows */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .arrow.prev {
+            left: 10px;
+        }
+
+        .arrow.next {
+            right: 10px;
+        }
+
+        .card h3,
+        .card p {
+            margin-top: 10px;
+            /* Adds space between the image and text */
+            text-align: center;
+            /* Optional: to center-align text */
+        }
+
+
+        /* cart */
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            /* Adjust the height as needed */
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .text-container {
+            margin-top: 15px;
+            /* Adds space between buttons and text */
+        }
+
+        .card h3 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 16px;
+            font-weight: bold;
+            color: #e67e22;
+        }
+   
+        
     </style>
 
 </head>
@@ -112,6 +447,36 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
+    <!-- section 2  -->
+    <section class="mehendi-lehengas">
+        <h2>Mehendi Lehengas</h2>
+        <div class="slider">
+            <button class="prev">&#10094;</button>
+            <div class="slider-track">
+                <div class="card">
+                    <img class="main-img" src="section2.jpg" alt="Bright Olive Elegance">
+                    <img class="hover-img" src="section2a.jpg" alt="Bright Olive Elegance Hover">
+                    <h3>Bright Olive Elegance</h3>
+                    <p>AED 795</p>
+                </div>
+                <div class="card">
+                    <img class="main-img" src="section2.jpg" alt="Blissful Infant Blush">
+                    <img class="hover-img" src="section2a.jpg" alt="Blissful Infant Blush Hover">
+                    <h3>Blissful Infant Blush</h3>
+                    <p>AED 6,950</p>
+                </div>
+                <div class="card">
+                    <img class="main-img" src="section2.jpg" alt="Shimmering Vanilla Aura">
+                    <img class="hover-img" src="section2a.jpg" alt="Shimmering Vanilla Aura Hover">
+                    <h3>Shimmering Vanilla Aura</h3>
+                    <p>AED 4,950</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const swiper = new Swiper('.swiper-container', {
@@ -134,6 +499,32 @@
                 },
             });
         });
+        // section 2
+        const prevButton = document.querySelector('.arrow.prev');
+        const nextButton = document.querySelector('.arrow.next');
+        const cardContainer = document.querySelector('.card-container');
+
+        let currentIndex = 0; // Current position in the slider
+        const cardWidth = document.querySelector('.card').offsetWidth + 10; // Card width + gap
+        const visibleCards = Math.floor(cardContainer.offsetWidth / cardWidth); // Number of visible cards
+
+        // Next button functionality
+        nextButton.addEventListener('click', () => {
+            const maxIndex = Math.ceil(cardContainer.children.length - visibleCards);
+            if (currentIndex < maxIndex - 1) {
+                currentIndex++;
+                cardContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            }
+        });
+
+        // Previous button functionality
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                cardContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            }
+        });
+
 
     </script>
 
